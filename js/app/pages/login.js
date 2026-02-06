@@ -19,7 +19,7 @@ export const login = {
 
       axios.post(this.parent.url + "/site/login", data).then(function(response) {
         if (response.data.error) {
-          self.$refs.msgAlertFun(response.data.error);
+          self.$refs.msg.alertFun(response.data.error);
         }
 
         if (response.data.user) {
@@ -71,4 +71,5 @@ export const login = {
       </div>
     </div>
   `
+
 };
